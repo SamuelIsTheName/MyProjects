@@ -49,7 +49,7 @@ struct ContentView: View {
 func onOff(oN : Bool)
 {
     let lightID = "b39673d2-5492-419e-a4e2-c8b2f7c2ed04"
-        let urlString = "https://192.168.178.45/clip/v2/resource/light/\(lightID)"
+        let urlString = "https://add ip-address/clip/v2/resource/light/\(lightID)"
         
         guard let url = URL(string: urlString) else {
             print("Invalid URL")
@@ -61,7 +61,7 @@ func onOff(oN : Bool)
         request.httpMethod = "PUT"
         
         
-        request.setValue("4c8YxJqixFicuEX83r2U3zcckk9D-kvY841VAS8C", forHTTPHeaderField: "hue-application-key")
+        request.setValue("add application key", forHTTPHeaderField: "hue-application-key")
         
         
         let bodyData: [String: [String: Bool]] = ["on": ["on": oN]]
